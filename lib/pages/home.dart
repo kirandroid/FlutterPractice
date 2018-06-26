@@ -6,6 +6,7 @@ import './mlScan.dart';
 import './notify.dart';
 import './publicApi.dart';
 import './material.dart';
+import './ColorVote.dart';
 
 class homepage extends StatelessWidget {
   @override
@@ -113,7 +114,17 @@ class homepage extends StatelessWidget {
                           new MaterialPageRoute(
                               builder: (context) => new publicApiScreen()));
                     },
-                  )
+                  ),
+                  new ListTile(
+                    leading: new Icon(Icons.colorize),
+                    title: new Text("Color Vote"),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          new MaterialPageRoute(
+                              builder: (context) => new ColorVoteScreen()));
+                    },
+                  ),
                 ],
               )),
             ],
@@ -386,6 +397,28 @@ class homepage extends StatelessWidget {
                     context,
                     new MaterialPageRoute(
                         builder: (context) => new publicApiScreen()));
+              },
+            ),
+            new RaisedButton(
+              color: Colors.cyan,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Icon(
+                    Icons.colorize,
+                    color: Colors.white,
+                  ),
+                  new Text(
+                    "Color Vote",
+                    style: new TextStyle(color: Colors.white),
+                  )
+                ],
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new ColorVoteScreen()));
               },
             )
           ],

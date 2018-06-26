@@ -6,10 +6,12 @@ dependencies:
     sdk: flutter
 
   cloud_firestore:
+  flutter_colorpicker: any
   scheduled_notifications:
   http:
   google_sign_in:
   firebase_auth:
+  firebase_database: 
   html:
   flutter_html_view: "^0.3.1"
   mlkit: ^0.2.2
@@ -22,7 +24,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+"rules": {
+    ".read": true,
+    ".write": true
+  }
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
